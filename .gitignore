@@ -1,0 +1,25 @@
+# R projects
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# usernames and passwords for db connections
+database.csv 
+
+# confidential fishery dependent data
+*confidential*
+
+# old assessment archive
+archive
+
+# other file types we don't want to track
+*.xlsx
+*.xlsm
+*.docx
+*.pptx
+*.png
+*.Rdata
+
+# Windows thumbnail cache files
+Thumbs.db

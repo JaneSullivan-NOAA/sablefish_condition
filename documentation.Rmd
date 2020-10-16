@@ -1,0 +1,27 @@
+---
+title: "Documentation for Sablefish Condition Indicators"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Contacts:
+jane.sullivan@noaa.gov, kevin.siwicke@noaa.gov
+
+
+## Longline survey data
+
+We obtained specimen-level biological data from the NMFS Cooperative Longline Survey from the `longline` SQL server database using the `Age_View` and detailed survey station information from the `Stations_View_AKFIN`. Prior to analysis, we removed specimens with missing length, weight, or maturity information, and removed potentially erroneous data using the the `error_flag` field, which includes a check for outlying residuals from the established sablefish length-weight relationship. We only used biological data from the GOA. Although survey leg is not a field in the database, GOA stations correspond to legs 3-7 of the survey. Finally, we filtered out data from experimental stations (stations > 499). The resulting dataset included specimens from 1996 to 2020. Data from survey stations 62-149 were used, which included both slope and cross gully stations. Maturity status for females was determined using database maturity codes 1 and 2 for immature fish and 3-6 for mature fish.
+
+## Fishery data
+
+We pulled biological data collected from observers from the `AKFIN` database's `NORPAC.DEBRIEFED_AGE` table using sablefish species code '203'. The original data set included multiple gear types; however, we only retained specimens collected from longline gear code '8'. Maturity data for sablefish was very sparse and were not used for subsequent analyses. The earliest samples dated back to 1988; however, only samples from 1999-2019 were retained due to small sample sizes in earlier years. Other than these filters, we did not rigorously check for data quality or consistency in sampling strategies but reached out to the Fishery Monitoring and Analysis division for guidance on how best to utilize these data moving forward. Separate indicators were developed for the GOA and BSAI regions.
+
+## Overview of methods
+
+We used the open source `akfishcondition` R library version developed by the Resource Assessment and Conservation Engineering Division (RACE) / Groundfish Assessment Program (GAP) analysts at the Alaska Fishery Science Center (Rohan 2020). Detailed queries and code to reproduce the sablefish condition analysis are found at ***. Methods are consistent with analyses used by RACE/GAP to develop groundfish condition indicators for the GOA, EBS, and AI trawl surveys in 2020. The main difference is that we assumed a single stratum for each indicator, and therefore did not weight length-weight residuals by stratum-specific area biomass or corresponding relative population numbers or weight (RPN/RPW). Although this development may be of interest, sample sizes for indicator groups were frequently too low to stratify, especially in the survey data. 
+
+Sean Rohan (2020). akfishcondition: Groundfish condition index. R package version 1.1.0.

@@ -3,6 +3,8 @@ title: "Documentation for Sablefish Condition Indicators"
 output:
   word_document: default
   pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -22,6 +24,7 @@ We pulled biological data collected from observers from the `AKFIN` database's `
 
 ## Overview of methods
 
-We used the open source `akfishcondition` R library version developed by the Resource Assessment and Conservation Engineering Division (RACE) / Groundfish Assessment Program (GAP) analysts at the Alaska Fishery Science Center (Rohan 2020). Detailed queries and code to reproduce the sablefish condition analysis are found at ***. Methods are consistent with analyses used by RACE/GAP to develop groundfish condition indicators for the GOA, EBS, and AI trawl surveys in 2020. The main difference is that we assumed a single stratum for each indicator, and therefore did not weight length-weight residuals by stratum-specific area biomass or corresponding relative population numbers or weight (RPN/RPW). Although this development may be of interest, sample sizes for indicator groups were frequently too low to stratify, especially in the survey data. 
+We used the open source `akfishcondition` R library version developed by Resource Assessment and Conservation Engineering Division (RACE) / Groundfish Assessment Program (GAP) analysts at the Alaska Fishery Science Center (Rohan 2020). Detailed queries and code to reproduce the sablefish condition analysis are found at https://github.com/JaneSullivan-NOAA/sablefish_condition. Methods are consistent with analyses used by RACE/GAP to develop groundfish condition indicators for the GOA, EBS, and AI trawl surveys in 2020. However, unlike the methods used for RACE/GAP groundfish indicators, we assumed a single stratum for each group, and therefore did not weight length-weight residuals by stratum-specific area biomass or corresponding relative population numbers or weight (RPN/RPW). Although this development may be of interest, sample sizes for indicator groups were frequently too low to stratify, especially in the survey data. 
 
+## References
 Sean Rohan (2020). akfishcondition: Groundfish condition index. R package version 1.1.0.

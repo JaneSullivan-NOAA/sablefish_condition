@@ -4,16 +4,16 @@ lm(formula = logwt ~ loglen, na.action = na.exclude)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--1.82996 -0.08040  0.00626  0.09132  1.07798 
+-1.82998 -0.08035  0.00636  0.09020  1.07804 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) -10.65486    0.12604  -84.54   <2e-16 ***
-loglen        2.80615    0.02871   97.76   <2e-16 ***
+(Intercept) -10.66022    0.12576  -84.77   <2e-16 ***
+loglen        2.80736    0.02864   98.02   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.1491 on 6991 degrees of freedom
-Multiple R-squared:  0.5775,	Adjusted R-squared:  0.5775 
-F-statistic:  9557 on 1 and 6991 DF,  p-value: < 2.2e-16
+Residual standard error: 0.1489 on 7013 degrees of freedom
+Multiple R-squared:  0.578,	Adjusted R-squared:  0.578 
+F-statistic:  9607 on 1 and 7013 DF,  p-value: < 2.2e-16
 

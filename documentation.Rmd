@@ -1,5 +1,5 @@
 ---
-title: "Documentation for Sablefish Condition Indicators"
+title: "Documentation for 2020 Sablefish Condition Indicators"
 output:
   word_document: default
   pdf_document: default
@@ -9,22 +9,76 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(knitr)
+library(tidyverse)
 ```
 Contacts:
-jane.sullivan@noaa.gov, kevin.siwicke@noaa.gov
+jane.sullivan@noaa.gov, kevin.siwicke@noaa.gov 
 
+Queries for survey and fishery data were run October 15, 2020
 
 ## Longline survey data
 
-We obtained specimen-level biological data from the NMFS Cooperative Longline Survey from the `longline` SQL server database using the `Age_View` and detailed survey station information from the `Stations_View_AKFIN`. Prior to analysis, we removed specimens with missing length, weight, or maturity information, and removed potentially erroneous data using the the `error_flag` field, which includes a check for outlying residuals from the established sablefish length-weight relationship. We only used biological data from the GOA. Although survey leg is not a field in the database, GOA stations correspond to legs 3-7 of the survey. Finally, we filtered out data from experimental stations (stations > 499). The resulting dataset included specimens from 1996 to 2020. Data from survey stations 62-149 were used, which included both slope and cross gully stations. Maturity status for females was determined using database maturity codes 1 and 2 for immature fish and 3-6 for mature fish.
+Specimen-level biological data from the NMFS Cooperative Longline Survey were queried from the `longline` SQL server database using the `Age_View` and detailed survey station information from the `Stations_View_AKFIN`. Prior to analysis, we removed specimens with missing length, weight, or maturity information, and removed potentially erroneous data using the the `error_flag` field, which includes a built-in check for outlying residuals from the established sablefish length-weight relationship. We only used biological data from the GOA, which corresponds to legs 2-7 and stations 62-149 of the survey (Siwicke et al. 2020). Data from slope and cross gully stations were included in the analysis. The resulting data set included specimens from 1996 to 2020. Maturity status for females was determined using database maturity codes 1 and 2 for immature fish and 3-6 for mature fish.
 
 ## Fishery data
 
-We pulled biological data collected from observers from the `AKFIN` database's `NORPAC.DEBRIEFED_AGE` table using sablefish species code '203'. The original data set included multiple gear types; however, we only retained specimens collected from longline gear code '8'. Maturity data for sablefish was very sparse and were not used for subsequent analyses. The earliest samples dated back to 1988; however, only samples from 1999-2019 were retained due to small sample sizes in earlier years. Other than these filters, we did not rigorously check for data quality or consistency in sampling strategies but reached out to the Fishery Monitoring and Analysis division for guidance on how best to utilize these data moving forward. Separate indicators were developed for the GOA and BSAI regions.
+Fishery-dependent specimen data collected from observers were queried from the `AKFIN` database's `NORPAC.DEBRIEFED_AGE` table using sablefish species code '203'. The original data set included multiple gear types; however, only specimens collected from longline gear code '8' were used. Maturity data for sablefish were very sparse and could not used for subsequent analyses. The earliest samples dated back to 1988; however, only samples from 1999-2020 were retained due to small sample sizes in earlier years. Other than these filters, we did not rigorously check for data quality or consistency in sampling strategies but contacted the Fishery Monitoring and Analysis (FMA) division for guidance on how best to utilize these data in future years. Separate indicators were developed for the GOA and BSAI regions.
 
 ## Overview of methods
 
-We used the open source `akfishcondition` R library version developed by Resource Assessment and Conservation Engineering Division (RACE) / Groundfish Assessment Program (GAP) analysts at the Alaska Fishery Science Center (Rohan 2020). Detailed queries and code to reproduce the sablefish condition analysis are found at https://github.com/JaneSullivan-NOAA/sablefish_condition. Methods are consistent with analyses used by RACE/GAP to develop groundfish condition indicators for the GOA, EBS, and AI trawl surveys in 2020. However, unlike the methods used for RACE/GAP groundfish indicators, we assumed a single stratum for each group, and therefore did not weight length-weight residuals by stratum-specific area biomass or corresponding relative population numbers or weight (RPN/RPW). Although this development may be of interest, sample sizes for indicator groups were frequently too low to stratify, especially in the survey data. 
+We used the open source `akfishcondition` R library version developed by Resource Assessment and Conservation Engineering Division (RACE) / Groundfish Assessment Program (GAP) analysts at the Alaska Fishery Science Center (Rohan 2020). Queries and code to reproduce the sablefish condition analysis are found at https://github.com/JaneSullivan-NOAA/sablefish_condition. Methods are consistent with analyses used by RACE/GAP to develop groundfish condition indicators for the GOA, EBS, and AI trawl surveys in 2020. However, unlike the methods used for RACE/GAP groundfish indicators, we assumed a single stratum for each group, and therefore did not weight length-weight residuals by stratum-specific area biomass or corresponding relative population numbers or weight (RPN/RPW). Although this development may be of interest, sample sizes for indicator groups were frequently too low to stratify, especially in the survey data. 
+
+## 2020 sablefish condition indicators
+
+We recommend the following sablefish condition indicators for inclusion in the Ecosystem Socioeconomic Profile (ESP): 
+
+(1) GOA LL Survey: Age-4 immature females 
+(2) GOA LL Survey: Large females >= 75 cm 
+(3) GOA LL Fishery: Large females >= 75 cm 
+(4) BSAI LL Fishery: Large females >= 75 cm 
+
+The same indicators were used in the 2019 ESP (Hanselman et al. 2019, Appendix 3C). A previously used indicator that combined all juvenile females was removed because it included multiple year classes and was therefore difficult to interpret. Age-4 was selected to represent younger, immature female sablefish because they are well-represented in the survey compared to ages 2 or 3. Large mature females were represented by $\geq$ 75 cm in the longline survey in the GOA and in longline fisheries in the GOA and BSAI. 
+
+```{r indicator_fig, include = TRUE, out.width = "100%", echo = FALSE}
+include_graphics("results/2020/recommended_sable_condition_2020.png") 
+```
+
+Estimated length-weight residuals with standard errors and sample sizes for each indicator group are reported below. Note that residuals were not estimated or reported for BSAI longline fishery females $\geq$ 75 cm after 2016 due to low sample sizes (n<10 were removed from the analysis).
+
+```{r indicator_results, message=TRUE, warning=FALSE, include=FALSE}
+res <- read_csv("results/2020/recommended_sable_condition_indicators_2020.csv")
+
+res <- res %>% 
+  mutate_at(vars(mean_wt_resid), list(~ formatC(., format = "f", digits = 2, drop0trailing = FALSE))) %>% 
+    mutate_at(vars(se_wt_resid), list(~ formatC(., format = "f", digits = 3, drop0trailing = FALSE))) %>% 
+    mutate(indicator = factor(indicator, 
+                              levels = c("GOA LL Survey: Age-4 immature females",
+                                         "GOA LL Survey: Large females >= 75 cm",
+                                         "GOA LL Fishery: Large females >= 75 cm",
+                                         "BSAI LL Fishery: Large females >= 75 cm"),
+                              ordered = TRUE)) %>% 
+  arrange(indicator, year)
+
+names(res) <- c("Indicator", "Year", "n", "Residual", "SE")
+
+```
+
+```{r indicator_tbl, echo=FALSE, message=TRUE, warning=FALSE}
+
+kable(res, align = "llrrr")
+```
+
+## Future development
+
+We recommend the survey data be evaluated for seasonal and spatial trends in length-weight. We recommend a consultation with FMA to ensure the fishery data were consistently sampled over time. Finally, we recommend an examination of the serial residual patterns in the $\geq$ 75 cm indicators.
 
 ## References
-Sean Rohan (2020). akfishcondition: Groundfish condition index. R package version 1.1.0.
+
+
+Hanselman, D.H., Rodgveller, C.J., Fenske, K.H., Shotwell, K.S, Echave, K.B., Malecha, P.W., and Lunsford, C.R. 2019. Assessment of the sablefish stock in Alaska. In Stock assessment and fishery evaluation report for the groundfish resources of the GOA and BS/AI. North Pacific Fishery Management Council, 605 W 4th Ave, Suite 306 Anchorage, AK 99501. https://archive.afsc.noaa.gov/refm/docs/2019/sablefish.pdf
+
+Rohan, S. 2020. akfishcondition: Groundfish condition index. R package version 1.1.0.
+
+Siwicke, K., P. Malecha, C. Rodgveller, and C. Lunsford. 2020. The 2019 longline survey of the Gulf of Alaska and eastern Bering Sea on the FV Ocean Prowler: Cruise Report OP 19  01. AFSC Processed Rep. 2020  02, 30 p. Alaska Fish. Sci. Cent., NOAA, Natl. Mar. Fish. Serv., Auke Bay Laboratories, 17109 Point Lena Loop Road, Juneau, AK 99801. This document is available online at: https://repository.library.noaa.gov/view/noaa/24202

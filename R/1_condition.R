@@ -74,7 +74,10 @@ sable %>% dplyr::count(active) # check that all stations are active
 range(sable$station_number)
 stations %>% 
   filter(between(station_number, 62, 76)) %>%
-  distinct(active, rpw_flag, nmfs_area_code, council_sablefish_management_area, habitat)
+  dplyr::count(active, rpw_flag, nmfs_area_code, council_sablefish_management_area, habitat)
+
+# Stations 62 - 75 are sampled on leg 2 before the vessel goes over to ketchikan
+# sable <- sable %>% filter(station_number >= 76)
 
 # Fishery data ----
 fsh <- read_csv(paste0(dat_path, "/sable_fishery_bio_", YEAR, ".csv"),
@@ -96,10 +99,10 @@ fsh %>% dplyr::count(year, sex, fmp) %>%
   arrange(fmp) %>% 
   print(n = Inf)
 
-# Sampling really picked up 1999. Also cut off current year
-fsh <- fsh %>% filter(between(year, 1999, YEAR-1))
+# Sampling really picked up 1999. Don't cut off current year
+fsh <- fsh %>% filter(between(year, 1999, YEAR))
 
-# EDA - delete later ----
+# EDA - ----
 
 # concern there will be too many mature fish in this group
 sable %>% 
@@ -159,37 +162,37 @@ sable1 %>%
 #   arrange(year) %>% 
 #   print(n = Inf)
 
-# 2: GOA Survey All age-4 females ----
+# 2: GOA Survey age-4 males ----
 
 sable2 <- sable %>% 
-  filter(sex == 2 & age == 4) %>% 
+  filter(sex == 1 & age == 4) %>% 
   mutate(condition_stratum = NA,
          species_code = 205102,
-         common_name = "GOA LL Survey: Age-4 immature + mature females",
+         common_name = "GOA LL Survey: Age-4 immature males",
          area_biomass = 1) 
 sable2 %>% 
   dplyr::count(year) %>% 
   print(n = Inf)
 
-# 3: GOA Survey Females >= 75 cm ----
+# 3: GOA Survey Immature females <= 65 cm ----
 sable3 <- sable %>% 
-  filter(sex == 2 & length >= 75) %>% 
+  filter(sex == 2 & length <= 65 & mature == 0) %>%
   mutate(condition_stratum = NA,
          species_code = 205103,
-         common_name = "GOA LL Survey: Large females >= 75 cm",
+         common_name = "GOA LL Survey: Immature juvenile females <= 65 cm",
+         # added area biomass = 1 (equal weighting)
          area_biomass = 1)
 
 sable3 %>% 
   dplyr::count(year) %>% 
   print(n = Inf)
 
-# 4: GOA Survey Immature females <= 55 cm ----
+# 4: GOA Survey Females >= 75 cm ----
 sable4 <- sable %>% 
-  filter(sex == 2 & length <= 55 & mature == 0) %>%
+  filter(sex == 2 & length >= 75) %>% 
   mutate(condition_stratum = NA,
          species_code = 205104,
-         common_name = "GOA LL Survey: Immature juvenile females <= 55 cm",
-         # added area biomass = 1 (equal weighting)
+         common_name = "GOA LL Survey: Large females >= 75 cm",
          area_biomass = 1)
 
 sable4 %>% 
@@ -221,7 +224,7 @@ sable6 %>%
 # Prep data for condition analysis ----
 sable_sub <- sable1 %>% 
   bind_rows(sable2) %>% 
-  bind_rows(sable3) %>% 
+  bind_rows(sable3) %>%
   bind_rows(sable4) %>% 
   bind_rows(sable5) %>% 
   bind_rows(sable6) %>% 
@@ -286,6 +289,8 @@ sable_ann_mean_resid_df <- sable_resids %>%
 
 # Plot adults -----
 
+bs <- 15 
+
 sable_ann_mean_resid_df %>% 
   filter(grepl("Large", common_name)) %>% 
   ggplot() + 
@@ -305,10 +310,11 @@ sable_ann_mean_resid_df %>%
   facet_wrap(~common_name, ncol = 1) + #, scales = "free_y"
   scale_x_continuous(name = "Year") +
   scale_y_continuous(name = "Length-weight residual (ln(g))") +
-  theme_minimal() +
+  theme_minimal(base_size = bs) +
   ggtitle("Condition indicators for large female sablefish\n")
 
-ggsave(paste0(out_path, "/large_sable_condition_", YEAR, ".png"))
+ggsave(paste0(out_path, "/large_sable_condition_", YEAR, ".png"),
+       width = 6, height = 7, units = "in")
 
 # Plot smaller fish ----
 
@@ -331,12 +337,46 @@ sable_ann_mean_resid_df %>%
   facet_wrap(~common_name, ncol = 1) + #, scales = "free_y"
   scale_x_continuous(name = "Year") +
   scale_y_continuous(name = "Length-weight residual (ln(g))") +
-  theme_minimal() +
-  ggtitle("Condition indicators for young/immature female sablefish\n")
+  theme_minimal(base_size = bs) +
+  ggtitle("Condition indicators for small sablefish\n")
 
-ggsave(paste0(out_path, "/small_sable_condition_", YEAR, ".png"))
+ggsave(paste0(out_path, "/small_sable_condition_", YEAR, ".png"),
+       width = 6, height = 7, units = "in")
 
-# 
+## Recommended indicators -----
+
+sable_ann_mean_resid_df %>% #ungroup() %>% distinct(common_name)
+  filter(common_name %in% c("GOA LL Survey: Age-4 immature females",
+                            "GOA LL Survey: Large females >= 75 cm",
+                            "GOA LL Fishery: Large females >= 75 cm",
+                            "BSAI LL Fishery: Large females >= 75 cm")) %>%
+  mutate(common_name = factor(common_name, 
+                              levels = c("GOA LL Survey: Age-4 immature females",
+                                         "GOA LL Survey: Large females >= 75 cm",
+                                         "GOA LL Fishery: Large females >= 75 cm",
+                                         "BSAI LL Fishery: Large females >= 75 cm"),
+                              ordered = TRUE)) %>% 
+  ggplot() + 
+  geom_bar(aes(x = year, 
+               y = mean_wt_resid), 
+           stat = "identity", 
+           fill = "plum", 
+           color = "black") +
+  geom_errorbar(aes(x = year, 
+                    ymax = mean_wt_resid + 1.96 * se_wt_resid,
+                    ymin = mean_wt_resid - 1.96 * se_wt_resid),
+                width = 0.2) +
+  geom_hline(yintercept = 0) +
+  facet_wrap(~common_name, ncol = 1, scales = "free_y") + 
+  scale_x_continuous(name = "Year") +
+  scale_y_continuous(name = "Length-weight residual (ln(g))") +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle("Sablefish condition indicators for 2020\nwith 95% confidence intervals\n")
+
+ggsave(paste0(out_path, "/recommended_sable_condition_", YEAR, ".png"),
+       width = 6, height = 7.5, units = "in")
+
 # # Restandardize ----
 # sable_ann_mean_resid_df %>% 
 #   filter(common_name == "Sablefish: age-4 immature females") %>% 
@@ -352,6 +392,13 @@ out_file <- sable_sub %>%
   select(indicator = common_name, year, n, mean_wt_resid, se_wt_resid) %>% 
   dplyr::arrange(indicator)
 write_csv(out_file, paste0(out_path, "/sable_condition_indicators_", YEAR, ".csv"))
+
+out_file %>% 
+  filter(indicator %in% c("GOA LL Survey: Age-4 immature females",
+                          "GOA LL Survey: Large females >= 75 cm",
+                          "GOA LL Fishery: Large females >= 75 cm",
+                          "BSAI LL Fishery: Large females >= 75 cm")) %>%
+  write_csv(paste0(out_path, "/recommended_sable_condition_indicators_", YEAR, ".csv"))
 
 # move diagnostics ----
 
@@ -488,3 +535,4 @@ ggplot(df,
 # scale_x_continuous(breaks = axis$breaks, labels = axis$labels)
 
 ggsave(paste0(out_path, "/sable_srv_laa.png"))
+

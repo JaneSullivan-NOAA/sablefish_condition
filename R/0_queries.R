@@ -1,17 +1,17 @@
 # Queries for sablefish condition factor
 # Contact: jane.sullivan@noaa.gov
-# Last updated: Oct 2020
+# Last updated: Oct 2022
 
 # devtools::session_info()
-# version  R version 4.0.2 (2020-06-22)
-# os       Windows 10 x64              
-# system   x86_64, mingw32             
-# ui       RStudio 
+# version  R version 4.2.0 (2022-04-22 ucrt)
+# os       Windows 10 x64 (build 19044)
+# system   x86_64, mingw32
+# ui       RStudio
 
 # Set up ----
 
 # Most recent survey year 
-YEAR <- 2020
+YEAR <- 2022
 
 # Create a year subdirectory to store annual data used for condition factors
 dat_path <- paste0("data/", YEAR)
@@ -25,7 +25,7 @@ if(length(libs[which(libs %in% rownames(installed.packages()) == FALSE )]) > 0) 
 lapply(libs, library, character.only = TRUE)
 
 # connect to longline database
-conn <- odbcDriverConnect(connection="Driver={SQL Server};server=161.55.120.51,1919;database=LONGLINE;trusted_connection=yes;")
+conn <- odbcDriverConnect(connection="Driver={SQL Server};server=161.55.120.71,1919;database=LONGLINE;trusted_connection=yes;")
 
 # afsc/akfin dbs
 db <- read_csv("database.csv") # user-specific usernames and passwords, not tracked on github
@@ -82,6 +82,14 @@ query <- paste0("select   year, nmfs_area, gear, species,
                  from     norpac.debriefed_age
                  where    species in '203'") 
 
+# flat version
+query <- paste0("select   year, nmfs_area, gear, species,
+                          length, weight, age, maturity_code, maturity_description,
+                          sex, bottom_depth_fathoms, haul_offload_date,
+                          performance
+                 from     norpac.debriefed_age_flat_mv
+                 where    species in '203'") 
+
 fsh <- sqlQuery(channel_akfin, query) %>% 
   write_csv(paste0(raw_path, "/sable_fishery_bio_", YEAR, ".csv"))
 
@@ -97,3 +105,4 @@ fsh %>%
   mutate(nmfs_area = as.character(nmfs_area)) %>% 
   left_join(nmfs_area_lookup)  %>% 
   write_csv(paste0(dat_path, "/sable_fishery_bio_", YEAR, ".csv"))
+

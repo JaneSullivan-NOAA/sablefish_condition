@@ -1,6 +1,6 @@
 # Queries for sablefish condition factor
 # Contact: jane.sullivan@noaa.gov
-# Last updated: Oct 2022
+# Last updated: Sep 2023
 
 # devtools::session_info()
 # version  R version 4.2.0 (2022-04-22 ucrt)
@@ -11,7 +11,7 @@
 # Set up ----
 
 # Most recent survey year 
-YEAR <- 2022
+YEAR <- 2023
 
 # Create a year subdirectory to store annual data used for condition factors
 dat_path <- paste0("data/", YEAR)
@@ -99,7 +99,7 @@ query <- "select  distinct  fmp_area as fmp, fmp_subarea,
           from              council.comprehensive_blend_ca"
 
 nmfs_area_lookup <- sqlQuery(channel_akfin, query) %>% rename_all(tolower)
-
+nmfs_area_lookup <- nmfs_area_lookup[complete.cases(nmfs_area_lookup),]
 fsh %>% 
   rename_all(tolower) %>%
   mutate(nmfs_area = as.character(nmfs_area)) %>% 

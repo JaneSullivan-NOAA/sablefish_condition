@@ -1,6 +1,6 @@
 # Sablefish condition indicator analysis
 # Contact: jane.sullivan@noaa.gov
-# Last updated: Oct 2022
+# Last updated: Oct 2023
 
 # devtools::session_info()
 # version  R version 4.2.0 (2022-04-22 ucrt)
@@ -11,7 +11,7 @@
 # Set up ----
 
 # Most recent survey year 
-YEAR <- 2022
+YEAR <- 2023
 
 dat_path <- paste0("data/", YEAR) # directory where source data is contained
 out_path <- paste0("results/", YEAR) # directory for results/output
@@ -30,22 +30,19 @@ pkg_version <- packageVersion("akfishcondition")
 
 sable <- read_csv(paste0(dat_path, "/sable_bio_1981_", YEAR, ".csv"),
                   guess_max = 1e6)
+sable %>% group_by(year) %>% tally() %>% print(n=Inf)
 
-# manually bring in 2022 LLS specimen data from Andrew Dimond 2022-10-13
-sable22 <- read_csv(paste0(dat_path, "/2022_LL_Survey_Otoliths.csv")) %>% 
-  mutate(year = YEAR,
-         error_flag = 0,
-         weight = Weight / 1e3,
-         length = Length / 10) %>% 
-  dplyr::select(year, station_number = Station, specimen_number = `Specimen Number`,
-                maturity = Maturity, sex = Sex, length, weight, error_flag)
+# manually bring in 2022 LLS specimen data from Cara R 2023-10-02
+sable22 <- read_csv("data/2022/sable_specimen_2022.csv") %>%
+  mutate(year = 2022) %>%
+  dplyr::select(year, specimen_number = specimen, age) 
 
-sable22 <- sable22 %>% 
-  left_join(sable %>% 
-              distinct(station_number, council_sablefish_management_area))
-
-sable <- bind_rows(sable, sable22) %>% 
-  arrange(year)
+sable <- sable %>%
+  filter(year == 2022) %>% 
+  select(-age) %>% 
+  left_join(sable22, by = join_by(year, specimen_number)) %>% 
+  bind_rows(sable %>% filter(year != 2022)) %>% 
+  arrange(year, specimen_number)
 
 names(sable)
 
@@ -477,6 +474,91 @@ out_file %>%
   select(YEAR = year, INDICATOR_NAME = indicator, DATA_VALUE = mean_wt_resid) %>% 
   write_csv(paste0(out_path, "/Annual_Sablefish_Condition_Female_Adult_GOA_Fishery_", YEAR, ".csv"))
 
+# reformat again for the latest submission tool (2023) ----
+source('R/write_indicator.R')
+
+# GOA LL Survey: Age-4 immature females:
+tmp <- "GOA LL Survey: Age-4 immature females"
+
+INDICATOR_YEAR <- out_file %>% filter(indicator == tmp) %>% 
+  pull(year) %>% paste(collapse = " ", sep = " ")
+
+INDICATOR_VALUE <- out_file %>% filter(indicator == tmp) %>% 
+  pull(mean_wt_resid) %>% round(digits = 4) %>% paste(collapse = " ", sep = " ")
+
+write_indicator(SUBMISSION_YEAR = YEAR,
+                INDICATOR_NAME = "Summer_Sablefish_Condition_Female_Age4_GOA_Survey",
+                DESCRIPTION = "Summer sablefish condition for age-4, immature female sablefish. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA AFSC longline survey (legs 2-7 including slope and cross gully stations), 1996 to present.",
+                STATUS_TRENDS = "This indicator is lagged by one year because it relies on age data, which take longer to provide. The condition of age-4 immature females was below average in 2022.",
+                FACTORS = "Factors influencing the condition of age-4, immature female sablefish in 2022 could include poor environmental conditions, reduced in prey availability or prey quality, or increased inter- or intra-specific competition.",
+                IMPLICATIONS = "Poor condition indicators for age-4, immature female sablefish in 2022 could translate into slower maturation and somatic growth, or reduced survival rates.",
+                REFERENCES = "Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0.",
+                INDICATOR_YEAR = INDICATOR_YEAR,
+                INDICATOR_VALUE = INDICATOR_VALUE,
+                OUTPATH = out_path)
+
+# GOA LL Survey: Large females >= 75 cm
+tmp <- "GOA LL Survey: Large females >= 75 cm"
+
+INDICATOR_YEAR <- out_file %>% filter(indicator == tmp) %>% 
+  pull(year) %>% paste(collapse = " ", sep = " ")
+
+INDICATOR_VALUE <- out_file %>% filter(indicator == tmp) %>% 
+  pull(mean_wt_resid) %>% round(digits = 4) %>% paste(collapse = " ", sep = " ")
+
+write_indicator(SUBMISSION_YEAR = YEAR,
+                INDICATOR_NAME = "Summer_Sablefish_Condition_Female_Adult_GOA_Survey",
+                DESCRIPTION = "Summer sablefish condition for large adult (>=750 mm) female sablefish. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA AFSC longline survey (legs 2-7 including slope and cross gully stations), 1996 to present.",
+                STATUS_TRENDS = "The condition of large adult (>=750 mm) female sablefish improved from below average in 2022 to average or slightly above average in 2023.",
+                FACTORS = "Factors influencing the condition of large adult (>=750 mm) female sablefish in 2023 could include improved environmental conditions, increase in prey availability or prey quality, or reduced inter- or intra-specific competition relative to 2022.",
+                IMPLICATIONS = "Improved condition indicators for large adult (>=750 mm) female sablefish in 2023 could translate into a lower likelihood of skip spawning, increased somatic growth rates, or increased survival rates relative to 2022.",
+                REFERENCES = "Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0.",
+                INDICATOR_YEAR = INDICATOR_YEAR,
+                INDICATOR_VALUE = INDICATOR_VALUE,
+                OUTPATH = out_path)
+
+# GOA Fishery: Large females >= 75 cm
+tmp <- "GOA Fishery: Large females >= 75 cm"
+
+INDICATOR_YEAR <- out_file %>% filter(indicator == tmp) %>% 
+  pull(year) %>% paste(collapse = " ", sep = " ")
+
+INDICATOR_VALUE <- out_file %>% filter(indicator == tmp) %>% 
+  pull(mean_wt_resid) %>% round(digits = 4) %>% paste(collapse = " ", sep = " ")
+
+write_indicator(SUBMISSION_YEAR = YEAR,
+                INDICATOR_NAME = "Annual_Sablefish_Condition_Female_Adult_GOA_Fishery",
+                DESCRIPTION = "Annual sablefish condition for large adult (>=750 mm) female sablefish in the GOA sablefish fishery. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA fishery, 1999 to present.",
+                STATUS_TRENDS = "The condition of large adult (>=750 mm) female sablefish improved from below average in 2022 to average or slightly below average in 2023.",
+                FACTORS = "Factors influencing the condition of large adult (>=750 mm) female sablefish in 2023 could include improved environmental conditions, increase in prey availability or prey quality, or reduced inter- or intra-specific competition in the GOA relative to 2022.",
+                IMPLICATIONS = "Improved condition indicators for large adult (>=750 mm) female sablefish in 2023 could translate into a lower likelihood of skip spawning, increased somatic growth rates, or increased survival rates relative to 2022.",
+                REFERENCES = "Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0.",
+                INDICATOR_YEAR = INDICATOR_YEAR,
+                INDICATOR_VALUE = INDICATOR_VALUE,
+                OUTPATH = out_path)
+
+# BSAI Fishery: Large females >= 75 cm
+tmp <- "BSAI Fishery: Large females >= 75 cm"
+
+INDICATOR_YEAR <- out_file %>% filter(indicator == tmp) %>% 
+  pull(year) %>% paste(collapse = " ", sep = " ")
+
+INDICATOR_VALUE <- out_file %>% filter(indicator == tmp) %>% 
+  pull(mean_wt_resid) %>% round(digits = 4) %>% paste(collapse = " ", sep = " ")
+
+write_indicator(SUBMISSION_YEAR = YEAR,
+                INDICATOR_NAME = "Annual_Sablefish_Condition_Female_Adult_BSAI_Fishery",
+                DESCRIPTION = "Annual sablefish condition for large adult (>=750 mm) female sablefish in the BSAI sablefish fishery. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA fishery, 1999 to present.",
+                STATUS_TRENDS = "There was insufficient data in the BSAI sablefish fishery to estimate a condition factor for 2023. I recommend removing this indicator from the sablefish ESP.",
+                FACTORS = "Insufficient data.",
+                IMPLICATIONS = "Insufficient data.",
+                REFERENCES = "Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0.",
+                INDICATOR_YEAR = INDICATOR_YEAR,
+                INDICATOR_VALUE = INDICATOR_VALUE,
+                OUTPATH = out_path)
+
+# Comment left in 2023 indicator submission: I recommend removing this indicator from the sablefish ESP. There is insufficient data for it to be meaningful and that is unlikely to change in the future.
+
 # move diagnostics ----
 
 # clean up the default printing of diagnostic files for consistency with this
@@ -507,8 +589,6 @@ sable %>%
 
 library(ggthemes)
 pal <- ggthemes::canva_pal("Warm and cool")(4) 
-
-YEAR = 2022
 
 # By cohort
 df_cohort <- df %>% 

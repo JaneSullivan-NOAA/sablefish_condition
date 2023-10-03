@@ -1,0 +1,21 @@
+#Ecosystem and Socioeconomic Profile Contribution
+#INDICATOR_REVIEW ----------------------------------------------------------------------------------------
+#SUBMISSION_YEAR
+2023
+#INDICATOR_NAME
+"Summer_Sablefish_Condition_Female_Age4_GOA_Survey"
+#DESCRIPTION
+"Summer sablefish condition for age-4, immature female sablefish. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA AFSC longline survey (legs 2-7 including slope and cross gully stations), 1996 to present."
+#STATUS_TRENDS
+"This indicator is lagged by one year because it relies on age data, which take longer to provide. The condition of age-4 immature females was below average in 2022."
+#FACTORS
+"Factors influencing the condition of age-4, immature female sablefish in 2022 could include poor environmental conditions, reduced in prey availability or prey quality, or increased inter- or intra-specific competition."
+#IMPLICATIONS
+"Poor condition indicators for age-4, immature female sablefish in 2022 could translate into slower maturation and somatic growth, or reduced survival rates."
+#REFERENCES
+"Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0."
+#INDICATOR_DATA ----------------------------------------------------------------------------------------
+#YEAR
+1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022
+#INDICATOR_VALUE
+0.0041 -0.0167 -0.0035 -0.0114 0.0139 0.0343 -0.0022 -0.013 0.0325 -0.0088 0.0151 -0.0198 0.0166 0.0435 0.0094 -0.0248 0.0125 -0.0088 0.0098 -0.0444 -0.0017 -0.0628 -0.0153 -0.0294 -0.0088 0.0261 -0.0365

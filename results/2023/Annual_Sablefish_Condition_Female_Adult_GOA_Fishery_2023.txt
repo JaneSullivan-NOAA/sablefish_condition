@@ -1,0 +1,21 @@
+#Ecosystem and Socioeconomic Profile Contribution
+#INDICATOR_REVIEW ----------------------------------------------------------------------------------------
+#SUBMISSION_YEAR
+2023
+#INDICATOR_NAME
+"Annual_Sablefish_Condition_Female_Adult_GOA_Fishery"
+#DESCRIPTION
+"Annual sablefish condition for large adult (>=750 mm) female sablefish in the GOA sablefish fishery. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA fishery, 1999 to present."
+#STATUS_TRENDS
+"The condition of large adult (>=750 mm) female sablefish improved from below average in 2022 to average or slightly below average in 2023."
+#FACTORS
+"Factors influencing the condition of large adult (>=750 mm) female sablefish in 2023 could include improved environmental conditions, increase in prey availability or prey quality, or reduced inter- or intra-specific competition in the GOA relative to 2022."
+#IMPLICATIONS
+"Improved condition indicators for large adult (>=750 mm) female sablefish in 2023 could translate into a lower likelihood of skip spawning, increased somatic growth rates, or increased survival rates relative to 2022."
+#REFERENCES
+"Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0."
+#INDICATOR_DATA ----------------------------------------------------------------------------------------
+#YEAR
+1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+#INDICATOR_VALUE
+0.0146 0.0412 -0.0021 0.0303 -0.0014 -0.0184 -0.0059 -0.0298 -0.0272 -0.011 -0.0189 -0.0253 -0.0071 -0.038 -0.0478 -0.0232 -0.0365 7e-04 -0.0147 -0.012 -0.0106 0.0167 -0.025 -0.0725 -0.0201

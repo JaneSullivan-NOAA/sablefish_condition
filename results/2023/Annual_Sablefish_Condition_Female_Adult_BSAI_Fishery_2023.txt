@@ -1,0 +1,21 @@
+#Ecosystem and Socioeconomic Profile Contribution
+#INDICATOR_REVIEW ----------------------------------------------------------------------------------------
+#SUBMISSION_YEAR
+2023
+#INDICATOR_NAME
+"Annual_Sablefish_Condition_Female_Adult_BSAI_Fishery"
+#DESCRIPTION
+"Annual sablefish condition for large adult (>=750 mm) female sablefish in the BSAI sablefish fishery. Body condition was estimated using a length-weight relationship (Laman and Rohan, 2020) from data collected randomly for otoliths in the annual GOA fishery, 1999 to present."
+#STATUS_TRENDS
+"There was insufficient data in the BSAI sablefish fishery to estimate a condition factor for 2023. I recommend removing this indicator from the sablefish ESP."
+#FACTORS
+"Insufficient data."
+#IMPLICATIONS
+"Insufficient data."
+#REFERENCES
+"Rohan S, O'Leary C (2023). _akfishcondition: Groundfish morphometric condition indicator_. R package version 3.1.0."
+#INDICATOR_DATA ----------------------------------------------------------------------------------------
+#YEAR
+1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2021 2022 2023
+#INDICATOR_VALUE
+-0.0474 0.0025 -0.0169 -0.0266 0.0047 0.0179 0.0046 -0.0795 -0.0345 -0.0269 -0.0285 -0.0091 0.0122 0.0266 0.0223 -0.0301 -0.0382 -0.0096 NA NA NA NA -0.4228 NA

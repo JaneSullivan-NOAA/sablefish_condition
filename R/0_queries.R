@@ -1,9 +1,9 @@
 # Queries for sablefish condition factor
 # Contact: jane.sullivan@noaa.gov
-# Last updated: Sep 2023
+# Last updated: Oct 2024
 
 # devtools::session_info()
-# version  R version 4.2.0 (2022-04-22 ucrt)
+# version  R version 4.3.2 (2023-10-31 ucrt)
 # os       Windows 10 x64 (build 19044)
 # system   x86_64, mingw32
 # ui       RStudio
@@ -11,7 +11,7 @@
 # Set up ----
 
 # Most recent survey year 
-YEAR <- 2023
+YEAR <- 2024
 
 # Create a year subdirectory to store annual data used for condition factors
 dat_path <- paste0("data/", YEAR)

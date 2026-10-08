@@ -1,0 +1,188 @@
+station_number,description,active,rpw_flag,station_type_id,latitude,longitude,nmfs_area_code,area_code,geographic_area_name,habitat_type,inpfc_area,council_management_area,council_sablefish_management_area,region,fmp_management_area
+109,NA,0,0,1,60.79,-178.5,524,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+110,NA,0,0,1,60.11,-178.8,524,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+111,NA,0,0,1,60.36,-178.3,524,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+112,NA,0,0,1,60.46,-178.3,524,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+113,NA,0,0,1,59.83,-178.5,521,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+114,NA,0,0,1,59.6,-177.2,521,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+115,NA,0,0,1,59.6,-178.2,521,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+116,NA,0,0,1,59.33,-177.3,521,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+117,NA,0,0,1,59.23,-178.1,521,5,Bering 5 slope,Upper continental slope,Bering V,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+1,NA,1,1,1,58.778333333333336,-177.575,523,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+2,NA,1,1,1,58.62,-176.64166666666668,521,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+3,NA,0,1,1,58.963,-176.01,521,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+4,NA,1,1,1,58.49666666666667,-175.67,521,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+5,NA,0,1,1,58.64,-174.5,521,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+6,NA,1,1,1,58.333333333333336,-174.31166666666667,521,6,Bering 4 slope,Upper continental slope,Bering IV,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+7,NA,0,1,1,58.02,-173.8,521,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+8,NA,1,1,1,57.62833333333333,-174.165,521,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+9,NA,0,1,1,57.15,-173.4,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+10,NA,1,1,1,56.82833333333333,-173.37833333333333,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+11,NA,0,1,1,56.68,-172.1,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+12,NA,1,1,1,56.626666666666665,-172.35333333333332,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+13,NA,1,1,1,56.46666666666667,-171.45166666666665,521,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+14,NA,0,1,1,56.38,-171.3,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+15,NA,1,1,1,56.14666666666667,-170.73166666666665,521,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+511,replicate of station 9,0,0,2,57.06,-173.69,523,7,Bering 3 slope,Upper continental slope,Bering III,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+16,NA,0,1,1,56.12,-169.8,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+17,NA,1,1,1,56.038333333333334,-169.61833333333334,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+18,NA,1,1,1,56.24333333333333,-169.17166666666665,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+19,NA,0,1,1,56.03,-168.5,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+20,NA,1,1,1,55.06,-168.80166666666668,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+21,NA,0,1,1,55.63,-168.2,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+22,NA,1,1,1,55.458333333333336,-168.0035,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+23,NA,0,1,1,54.06,-167.01,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+24,NA,0,1,1,54.95,-167.15,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+25,NA,0,1,1,54.85,-167.3,518,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+26,NA,0,1,1,54.5,-167.1,518,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+27,NA,0,1,1,54.66,-166.4,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+28,NA,0,1,1,54.795,-166.4,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+29,NA,0,1,1,54.9,-166.04,517,8,Bering 2 slope,Upper continental slope,Bering II,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+30,NA,0,1,1,54.44,-165.6,519,9,Bering 1 slope,Upper continental slope,Bering I,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+31,NA,0,1,1,54.11,-166.4,519,9,Bering 1 slope,Upper continental slope,Bering I,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+32,NA,1,1,1,53.77166666666667,-167.33,518,9,Bering 1 slope,Upper continental slope,Bering I,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+33,NA,1,1,1,53.611666666666665,-168.29833333333335,518,9,Bering 1 slope,Upper continental slope,Bering I,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+34,NA,1,1,1,53.305,-168.89833333333334,518,9,Bering 1 slope,Upper continental slope,Bering I,Bering Sea,Bering Sea,Eastern  Bering Sea,BSAI
+35,NA,1,1,1,53.03,-170.10333333333332,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+36,NA,0,1,1,52.83,-171.2,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+37,NA,1,1,1,52.28,-173.49666666666667,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+38,NA,1,1,1,52.251666666666665,-174.84333333333333,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+39,NA,1,1,1,52.13,-175.57166666666666,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+40,NA,1,1,1,51.97,-176.45,541,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+41,NA,0,1,1,51.9,-177.5,542,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+42,NA,1,1,1,51.77333333333333,-178.96333333333334,542,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+502,experimental station,0,0,2,52.11667,-179.95,542,15,NE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+43,NA,0,1,1,52.05,178.3,542,16,NW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+44,NA,0,1,1,52.26,176.1,543,16,NW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+45,NA,0,1,1,52.745,174.4,543,16,NW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+46,NA,0,1,1,53.07,172.9,543,16,NW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+47,NA,0,1,1,52.55,173.05,543,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+48,NA,0,1,1,52.33,174.3,543,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+49,NA,0,1,1,51.71,175.8,543,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+50,NA,0,1,1,51.78,177.1,542,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+51,NA,0,1,1,51.75,178.1,542,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+52,NA,0,1,1,51.33,179,542,17,SW Aleutians slope,Upper continental slope,West Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+53,NA,1,1,1,51.405,-178.62666666666667,542,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+54,NA,1,1,1,51.763333333333335,-178.165,542,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+55,NA,1,1,1,51.59166666666667,-177.61666666666667,542,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+56,NA,0,1,1,51.54,-176.7,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+57,NA,1,1,1,51.733333333333334,-175.99333333333334,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+58,NA,1,1,1,51.848333333333336,-175.13333333333333,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+59,NA,1,1,1,51.88166666666667,-174.33833333333334,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+60,NA,1,1,1,51.92,-173.50166666666667,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+61,NA,1,1,1,52.44166666666667,-170.31,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+503,experimental station,0,0,2,51.95,-172.95,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+504,experimental station,0,0,2,52.25,-171.2,541,18,SE Aleutians slope,Upper continental slope,East Aleutians,Aleutians,Aleutians,Aleutian Islands,BSAI
+517,replicate of station 70 (old station 9) to study catch variability,0,0,2,54.12,-160.3,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+522,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,53.95,-162.9,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+62,NA,1,1,1,52.66,-169.00333333333333,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+63,NA,1,1,1,52.965,-168.135,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+64,NA,1,1,1,53.19166666666667,-166.855,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+65,NA,1,1,1,53.583333333333336,-165.685,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+66,NA,1,1,1,53.736666666666665,-164.46833333333333,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+67,NA,1,1,1,53.97,-163.26333333333332,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+68,NA,1,1,1,54.13333333333333,-161.63666666666666,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+69,NA,1,1,1,54.315,-161.06,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+70,NA,1,1,1,54.365,-160.235,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+71,NA,1,1,1,54.51,-159.255,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+526,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,54.23,-162.4,610,25,Shumagin Slope,Upper continental slope,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+118,NA,0,0,1,55.05,-158.2,620,28,Shumagin Gully,Shallow cross-shelf gully,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+119,NA,0,0,1,55.1,-158.5,620,28,Shumagin Gully,Shallow cross-shelf gully,Shumagin,Western Gulf of Alaska,Western Gulf of Alaska,Gulf of Alaska,GOA
+72,NA,1,1,1,54.63333333333333,-158.58,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+73,NA,1,1,1,54.85166666666667,-157.73666666666668,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+74,NA,1,1,1,55.24,-156.67333333333335,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+75,NA,1,1,1,55.641666666666666,-155.84833333333333,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+76,NA,1,1,1,55.766666666666666,-155.13833333333332,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+77,NA,1,1,1,56.041666666666664,-154.56666666666666,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+78,NA,1,1,1,55.973333333333336,-154.02166666666668,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+527,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,55.62,-155.128,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+533,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,54.52,-158.65,620,30,Chirikof slope,Upper continental slope,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+120,NA,1,0,1,55.788333333333334,-156.07666666666665,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+121,NA,1,0,1,55.75,-156.20166666666665,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+122,NA,1,0,1,56.18666666666667,-155.96333333333334,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+123,NA,1,0,1,56.23166666666667,-156.13,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+124,NA,1,0,1,56.98833333333333,-155.06333333333333,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+125,NA,1,0,1,57.001666666666665,-155.30333333333334,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+126,NA,1,0,1,57.346666666666664,-155.04,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+127,NA,1,0,1,57.348333333333336,-155.245,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+507,West Semidi - Gully station done only once,0,0,2,55.77,-157.505,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+508,West Semidi - Gully station done only once,0,0,2,55.76,-157.637,620,31,Shelikof Trough,Shallow cross-shelf gully,Chirikof,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+523,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,57.14,-151.03,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+88,NA,1,1,1,59.155,-147.60333333333332,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+79,NA,1,1,1,56.303333333333335,-153.07666666666665,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+80,NA,1,1,1,56.485,-152.21333333333334,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+81,NA,1,1,1,57.11833333333333,-151.22166666666666,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+82,NA,1,1,1,57.401666666666664,-150.57333333333332,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+83,NA,1,1,1,57.63166666666667,-149.91666666666666,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+84,NA,1,1,1,57.971666666666664,-149.16666666666666,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+85,NA,1,1,1,58.29333333333334,-148.61666666666667,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+86,NA,1,1,1,58.68833333333333,-148.34,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+535,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,57.29,-150.65,630,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+509,Chiniak Gully - gully station done only once,0,0,2,56.865,-151.83,541,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+510,Chiniak Gully - Gully station done only once,0,0,2,56.865,-175.98,541,35,Kodiak slope,Upper continental slope,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+87,NA,1,0,1,59.126666666666665,-148.65,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+128,NA,1,0,1,58,-149.84166666666667,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+129,NA,1,0,1,58.083333333333336,-149.90833333333333,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+130,NA,1,0,1,58.72666666666667,-149.19666666666666,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+131,NA,1,0,1,58.80166666666667,-149.04833333333335,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+132,NA,1,0,1,59.083333333333336,-149.4,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+133,NA,1,0,1,58.95,-149.50833333333333,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+134,NA,1,0,1,59.615,-146.96666666666667,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+135,NA,1,0,1,59.515,-147.15333333333334,630,36,Amatuli Gully,Shallow cross-shelf gully,Kodiak,Central Gulf of Alaska,Central Gulf of Alaska,Gulf of Alaska,GOA
+89,NA,1,1,1,59.263333333333335,-146.85166666666666,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+90,NA,1,1,1,59.5,-145.525,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+91,NA,1,1,1,59.52166666666667,-144.71166666666667,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+92,NA,1,1,1,59.555,-143.65166666666667,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+93,NA,1,1,1,59.55,-142.56333333333333,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+94,NA,1,1,1,59.388333333333335,-142.16333333333333,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+95,NA,1,1,1,59.05,-141.34333333333333,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+96,NA,1,1,1,58.685,-140.64,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+524,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,59.51,-144.35,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+500,experimental station,0,0,2,59.3,-141.96,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+501,experimental station,0,0,2,58.98,-140.96,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+534,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,59.52,-142.25,640,38,W Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+505,experimental station,0,0,2,58.88,-138.16,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+140,NA,0,0,1,58.665,-139.08,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+141,NA,0,0,1,58.64,-139.3,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+97,NA,1,1,1,58.468333333333334,-139.46666666666667,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+98,NA,1,1,1,58.14,-138.73,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+99,NA,1,1,1,57.87833333333333,-137.37833333333333,650,39,East Yakutat slope,Upper continental slope,Yakutat,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+136,NA,1,0,1,59.74666666666667,-143.58666666666667,640,41,W-Grounds,Shallow cross-shelf gully,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+137,NA,1,0,1,59.67333333333333,-143.38166666666666,640,41,W-Grounds,Shallow cross-shelf gully,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+138,NA,1,0,1,59.416666666666664,-140.93666666666667,640,42,Yakutat Valley,Shallow cross-shelf gully,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+139,NA,1,0,1,59.413333333333334,-141.16833333333332,640,42,Yakutat Valley,Shallow cross-shelf gully,Yakutat,Eastern Gulf of Alaska,West Yakutat,Gulf of Alaska,GOA
+100,NA,1,1,1,57.61833333333333,-136.53666666666666,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+101,NA,1,1,1,57.18833333333333,-136.235,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+102,NA,1,1,1,56.85166666666667,-135.99666666666667,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+525,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,55.77,-135.2,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+104,NA,1,1,1,55.983333333333334,-135.43666666666667,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+105,NA,1,1,1,55.55833333333333,-134.96666666666667,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+106,NA,1,1,1,55.346666666666664,-134.735,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+107,NA,1,1,1,54.9,-134.28666666666666,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+108,NA,1,1,1,54.45,-133.93,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+518,replicate of station 101 (old station number 40) to study catch variability,0,0,2,57.27,-136.3,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+519,replicate of station 102 (old station number 41) to study catch variability,0,0,2,56.9,-136,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+512,replicate of station 43 to study catch variability,0,0,2,56.02,-135.4,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+513,replicate of station 106 (old station 45) to study catch variability,0,0,2,55.39,-134.7,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+506,experimental station,0,0,2,55.33,-134.16,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+520,replicate of station 100 (old station number 39) to study catch variability,0,0,2,51.85,-136.68,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+521,replicate of station 143 (old station number 260) to study catch variability,0,0,2,51.85,-137.1,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+536,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,55.48,-135,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+537,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,56.4,-135.69,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+528,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,57,-136.167,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+529,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,55.79,-135.2,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+530,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,55.19,-134.36,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+531,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,54.84,-134.2,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+532,Previously unsampled location randomly chosen to study the spatial distribution of sablefish and the variability in their catch rates.,0,0,2,57.19,-136.3,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+516,replicate of station 44 to study catch variability,0,0,2,55.61,-135,650,45,Southeast slope,Upper continental slope,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+142,NA,1,1,1,57.915,-137.01,650,46,Spencer Gully,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+143,NA,1,1,1,57.96666666666667,-137.07666666666665,650,46,Spencer Gully,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+144,NA,1,1,1,55.93,-134.90166666666667,650,47,Ommaney Trench,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+145,NA,1,1,1,56.03333333333333,-134.92666666666668,650,47,Ommaney Trench,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+514,replicate of station 144 (old station 153) to study catch variability,0,0,2,56,-134.9,650,47,Ommaney Trench,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+515,replicate of station 145 (old station 253) to study catch variability,0,0,2,56.09,-134.92,650,47,Ommaney Trench,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+146,NA,0,0,1,55.546,-134.4,650,48,Iphigenia Gully,Shallow cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+147,NA,0,0,1,55.528,-134.66,650,48,Iphigenia Gully,Shallow cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+103,NA,1,0,1,56.38333333333333,-135.34833333333333,650,49,Southeast Shelf,Shallow cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+148,NA,1,1,1,54.64833333333333,-132.83833333333334,650,55,Dixon Entrance,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
+149,NA,1,1,1,54.598333333333336,-133.02333333333334,650,55,Dixon Entrance,Deep cross-shelf gully,Southeast,Eastern Gulf of Alaska,East Yakutat/Southeast,Gulf of Alaska,GOA
